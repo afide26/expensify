@@ -34,26 +34,26 @@ const setCount = ({count}={})=>(
     type:'SET',
     count
   }
-)
-const store = createStore((state={count:0}, action)=>{
+);
 
-  switch(action.type){
-    case 'INCREMENT':
-     return { count: state.count + action.incrementBy};
-
-    case 'DECREMENT':
-     return state.count >=1 ? { count: state.count - action.decrementBy} : 'Value is below 1';
-    
-    case 'SET':
-      return typeof action.count === 'number' ? {count: action.count} : 'You need to enter a number'
-
-    case 'RESET':
-     return { count: 0}
-    default:
-     return state;
+const countReducer = (state={count:0}, action)=>{
+    switch(action.type){
+      case 'INCREMENT':
+       return { count: state.count + action.incrementBy};
+  
+      case 'DECREMENT':
+       return state.count >=1 ? { count: state.count - action.decrementBy} : 'Value is below 1';
+      
+      case 'SET':
+        return typeof action.count === 'number' ? {count: action.count} : 'You need to enter a number'
+  
+      case 'RESET':
+       return { count: 0}
+      default:
+       return state;
+    }
   }
-
-});
+const store = createStore(countReducer);
 
 // State Getter
 // Watch and listen to state
@@ -94,4 +94,12 @@ store.dispatch(resetCount());
 
 store.dispatch(setCount({count:99}))
 
+// Object Spread Example
 
+// const user = {
+//   id:uuid(),
+//   name:"Alan"
+// }
+
+// const newUser = {...user, name:"Alan Fidelino", age:45, sex: 'Male'};
+// console.log('New User', newUser);
