@@ -21,12 +21,12 @@ const unsubscribe = store.subscribe(()=>{
   console.log(visibleExpenses)
 });
 
-store.dispatch(addExpense({description:'Water Bill', note:'Due next week', amount: 30000, createdAt: 1406477500000}));
+store.dispatch(addExpense({description:'Water Bill', note:'Due next week', amount: 30, createdAt: 1504836000000}));
 
-store.dispatch(addExpense({description:'Gas Bill', note:'due next month', amount: 4000, createdAt: 1506477600000}));
+store.dispatch(addExpense({description:'Gas Bill', note:'due next month', amount: 40, createdAt: 1506477600000}));
 
-store.dispatch(addExpense({description:'Bill for Gym Membership for Krav Maga', note:'quarterly due', amount: 40000, createdAt: 1306477600000}));
-store.dispatch(addExpense({description:'Bill for Web Developers Org Membership', note:'this is free for one year only', amount: 0, createdAt: 1206477600000}));
+store.dispatch(addExpense({description:'Bill for Gym Membership for Krav Maga', note:'quarterly due', amount: 400, createdAt: 1505268000000}));
+store.dispatch(addExpense({description:'Bill for Web Developers Org Membership', note:'this is free for one year only', amount: 0, createdAt: 1506045600000}));
 // store.dispatch(setTextFilter('Gas'));
 
 // setTimeout(()=>{
