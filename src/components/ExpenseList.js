@@ -11,6 +11,7 @@ const ExpenseList = (props)=>(
         {props.expenses.map((expense)=>(
           <ExpenseListItem 
             key={expense.id} 
+            id={expense.id}
             {...expense}
           />
         ))}

@@ -1,12 +1,10 @@
-// Import Action Creators
-import { setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate } from './../actions/filtersActions';
-
+import moment from 'moment';
 // Filters Reducer
 const defaultFilterState = {
   text:'',
   sortBy:'date',
-  startDate:undefined,
-  endDate: undefined
+  startDate:moment().startOf('month'),
+  endDate: moment().endOf('month')
 }
 const filtersReducer = (state=defaultFilterState, action)=>{
   switch(action.type){
@@ -19,10 +17,11 @@ const filtersReducer = (state=defaultFilterState, action)=>{
     case 'SET_START_DATE':
       return {...state, startDate: state.startDate};
     case 'SET_END_DATE':
-      return {...state, endDate: start.endDate};
+      return {...state, endDate: state.endDate};
     default:
      return state;
   }
 };
 
 export default filtersReducer;
+
