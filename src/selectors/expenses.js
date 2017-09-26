@@ -17,4 +17,4 @@ export default (expenses, {text, sortBy, startDate, endDate })=>{
       return a.amount < b.amount ? 1 : -1;
     }
   })
-}
+};
