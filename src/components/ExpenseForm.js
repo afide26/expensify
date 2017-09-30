@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
+
 
 export default class ExpenseForm extends Component{
   constructor(props){
-    console.log(props);
     super(props);
     this.state = {
       description: props.expense ? props.expense.description : '',
@@ -30,7 +29,7 @@ export default class ExpenseForm extends Component{
 
   onAmountChange = (e)=>{
     const amount = e.target.value;
-    if(amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)){
+    if((typeof amount==='number') || amount.match(/^\d{1,}(\.\d{0,2})?$/)){
       this.setState(()=>({amount:amount}))
     }
   }

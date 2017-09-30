@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the ExpenseListItem with data 1`] = `
+<div>
+  <Link
+    replace={false}
+    to="/edit/1"
+  >
+    <h3>
+      <strong>
+        Gum
+      </strong>
+    </h3>
+  </Link>
+  <p>
+    Amount due: $
+    395
+  </p>
+  <p>
+    Note: 
+    <em>
+      now
+    </em>
+  </p>
+  <code>
+    Created at: 
+    January 1st, 1970
+  </code>
+  <hr />
+</div>
+`;
+
+exports[`should render the ExpenseListItem with data 2`] = `
+<div>
+  <Link
+    replace={false}
+    to="/edit/1"
+  >
+    <h3>
+      <strong>
+        Gum
+      </strong>
+    </h3>
+  </Link>
+  <p>
+    Amount due: $
+    395
+  </p>
+  <p>
+    Note: 
+    <em>
+      now
+    </em>
+  </p>
+  <code>
+    Created at: 
+    January 1st, 1970
+  </code>
+  <hr />
+</div>
+`;
