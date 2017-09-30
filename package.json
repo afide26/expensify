@@ -10,7 +10,8 @@
     "build:dev": "webpack",
     "build:prod": " webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json"
+    "test": "jest --config=jest.config.json",
+    "heroku-postBuild":"yarn run build:prod"
   },
   "engines":{
     "node":"8.4.0"
