@@ -5,6 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start" : "node server/server.js", 
     "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": " webpack -p --env production",
