@@ -13,8 +13,10 @@ exports[`should render the ExpenseListItem with data 1`] = `
     </h3>
   </Link>
   <p>
-    Amount due: $
-    395
+    Amount due: 
+    $395.00
+     - Created at: 
+    January 1st, 1970
   </p>
   <p>
     Note: 
@@ -22,10 +24,7 @@ exports[`should render the ExpenseListItem with data 1`] = `
       now
     </em>
   </p>
-  <code>
-    Created at: 
-    January 1st, 1970
-  </code>
+  <code />
   <hr />
 </div>
 `;
@@ -43,8 +42,10 @@ exports[`should render the ExpenseListItem with data 2`] = `
     </h3>
   </Link>
   <p>
-    Amount due: $
-    395
+    Amount due: 
+    $395.00
+     - Created at: 
+    January 1st, 1970
   </p>
   <p>
     Note: 
@@ -52,10 +53,7 @@ exports[`should render the ExpenseListItem with data 2`] = `
       now
     </em>
   </p>
-  <code>
-    Created at: 
-    January 1st, 1970
-  </code>
+  <code />
   <hr />
 </div>
 `;
