@@ -11,23 +11,23 @@ let wrapper;
 
 test("should render summary with multiple expenses", ()=>{
   const wrapper = shallow(<ExpensesSummary 
-                            expenses={expenses} 
-                            totalExpenses={totalExpenses(expenses)}/>);
+                            expensesCount={3} 
+                            totalExpenses={2300030}/>);
   expect(wrapper).toMatchSnapshot();
 });
 
 test("should render summary with 1 expense", ()=>{
   const expense = [{id:2, amount: 900}]
   const wrapper = shallow(<ExpensesSummary 
-                            expenses={expenses} 
-                            totalExpenses={totalExpenses(expenses)}/>);
+                            expensesCount={1} 
+                            totalExpenses={500}/>);
   expect(wrapper).toMatchSnapshot();
 });
 
-test("should render summary with 1 expense", ()=>{
+test("should render summary without any expense", ()=>{
   const expense = []
   const wrapper = shallow(<ExpensesSummary 
-                            expenses={expenses} 
-                            totalExpenses={totalExpenses(expenses)}/>);
+                            expensesCount={0} 
+                            totalExpenses={0}/>);
   expect(wrapper).toMatchSnapshot();
 });
