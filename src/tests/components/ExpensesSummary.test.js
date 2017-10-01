@@ -4,7 +4,7 @@ import expenses from './../fixtures/expense.fixture';
 import { ExpensesSummary } from './../../components/ExpensesSummary';
 import { shallow } from 'enzyme';
 import totalExpenses from './../../selectors/expenses-total';
-import numeral from 'numeral';
+
 
 let wrapper;
 
