@@ -11,6 +11,8 @@ import 'react-dates/lib/css/_datepicker.css';
 
 import { addExpense } from './actions/expensesActions';
 import { setTextFilter,sortByAmount,sortByDate } from './actions/filtersActions';
+import './firebase/firebase';
+
 
 const store = configureStore();
 
