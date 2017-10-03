@@ -9,7 +9,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
-import { addExpense } from './actions/expensesActions';
+import { startSetExpenses } from './actions/expensesActions';
 import { setTextFilter,sortByAmount,sortByDate } from './actions/filtersActions';
 import './firebase/firebase';
 
@@ -23,4 +23,8 @@ const jsx = (
 );
 
 
-ReactDOM.render(jsx, document.querySelector("#app"));
+ReactDOM.render(<p>Loading...</p>, document.querySelector("#app"));
+store.dispatch(startSetExpenses()).then(()=>{
+  ReactDOM.render(jsx, document.querySelector("#app"));
+});
+
