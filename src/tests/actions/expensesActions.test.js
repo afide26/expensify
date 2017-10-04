@@ -5,7 +5,8 @@ import {
   addExpense, 
   removeExpense, 
   startRemoveExpense,
-  editExpense 
+  editExpense,
+  startEditExpense
 } from '../../actions/expensesActions.js';
 import expenses from './../fixtures/expense.fixture';
 import configureMockStore from 'redux-mock-store';
@@ -60,6 +61,27 @@ test('should set up edit expense action object', ()=>{
       amount:'1234'
     }
   })
+});
+
+test("should edit Expense from Firebase", (done)=>{
+  const store = createMockStore({});
+  const id = expenses[1].id;
+  const updates = { description:"New Expense from startEditExpense"};
+
+  store.dispatch(startEditExpense(id, updates))
+    .then(()=>{
+      const actions = store.getActions();
+      expect(actions[0]).toEqual({
+        type:"EDIT_EXPENSE",
+        id,
+        updates
+      });
+      return database.ref(`expenses/${id}`).once('value');
+    }).then((snapshot)=>{
+      expect(snapshot.val().description).toBe(updates.description);
+      done();
+    })
+
 });
 
 // ADD Expense Test with provided values
