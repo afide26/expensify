@@ -11,7 +11,7 @@ import 'react-dates/lib/css/_datepicker.css';
 
 import { startSetExpenses } from './actions/expensesActions';
 import { setTextFilter,sortByAmount,sortByDate } from './actions/filtersActions';
-import './firebase/firebase';
+import {firebase} from './firebase/firebase';
 
 
 const store = configureStore();
@@ -28,3 +28,10 @@ store.dispatch(startSetExpenses()).then(()=>{
   ReactDOM.render(jsx, document.querySelector("#app"));
 });
 
+firebase.auth().onAuthStateChanged((user)=>{
+  if(user){
+    console.log('log out');
+  }else{
+    console.log('log out');
+  }
+})

@@ -1,0 +1,22 @@
+
+.login{
+  padding:.5rem;
+  display:block;
+  width: 70%;
+  margin: .5rem auto;
+  .password, .email{
+    width: 100%;
+    padding: 1rem;
+  }
+  input[type="text"],
+  input[type="password"]{
+    padding: 1rem;
+    width: 100%;
+    border-radius: .5rem;
+  }
+  button{
+    display:block;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
