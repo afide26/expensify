@@ -2,12 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { startLogin } from './../actions/Auth';
 
-export const LoginComponent = ({startLogin})=>{
+export const LoginPage = ({startLogin})=>{
   return(
-    <div className="login">
-      <form name="Login" className="login">
-        <button onClick={startLogin}>Login with Google</button>
-      </form> 
+    <div>
+      <button onClick={startLogin}>Login with Google</button>
     </div>
   )
 }
@@ -19,4 +17,4 @@ const mapDispatchToProps = (dispatch)=>{
   }
 };
 
-export default connect(undefined,mapDispatchToProps)(LoginComponent)
+export default connect(undefined,mapDispatchToProps)(LoginPage)

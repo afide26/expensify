@@ -88,8 +88,5 @@ export const startSetExpenses = ()=>{
       });
       dispatch(setExpenses(expenses));
     })
-    .catch((error)=>{
-      console.log('Failed to set expenses: ', error);
-    })
   }
 };

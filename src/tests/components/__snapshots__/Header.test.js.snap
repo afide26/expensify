@@ -1,27 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render the Header correctly 1`] = `
-<header
-  className="header"
->
-  <img
-    className="header__image"
-    src="../../images/AFavicon.png"
-  />
-  <h1
-    className="header__title"
-  >
+<header>
+  <h1>
     Expensify
   </h1>
   <NavLink
     activeClassName="is-active"
     exact={true}
-    to="/"
-  >
-    Login
-  </NavLink>
-  <NavLink
-    activeClassName="is-active"
     to="/dashboard"
   >
     Dashboard
@@ -32,5 +18,10 @@ exports[`should render the Header correctly 1`] = `
   >
     Create Expense
   </NavLink>
+  <button
+    onClick={[Function]}
+  >
+    Logout
+  </button>
 </header>
 `;

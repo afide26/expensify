@@ -1,16 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render the login page 1`] = `
-<div
-  className="login"
->
-  <form
-    className="login"
-    name="Login"
-  >
-    <button>
-      Login with Google
-    </button>
-  </form>
+<div>
+  <button>
+    Login with Google
+  </button>
 </div>
 `;
