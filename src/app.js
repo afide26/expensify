@@ -9,8 +9,8 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
-import { startSetExpenses } from './actions/expensesActions';
-import { setTextFilter,sortByAmount,sortByDate } from './actions/filtersActions';
+import { startSetExpenses } from './actions/expensesActions'; 
+import { login, logout } from './actions/Auth';
 import {firebase} from './firebase/firebase';
 
 
@@ -36,6 +36,7 @@ ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
+    store.dispatch(login(user.uid));
     store.dispatch(startSetExpenses()).then(() => {
       renderApp();
       if(history.location.pathname === '/'){
@@ -43,6 +44,7 @@ firebase.auth().onAuthStateChanged((user) => {
       }
     });
   } else {
+    store.dispatch(logout());
     renderApp();
     history.push('/');
   }
