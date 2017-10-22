@@ -1,28 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render EditExpensePage 1`] = `
-<div
-  className="edit-expense"
->
-  <ExpenseForm
-    buttonLabel="Edit"
-    expense={
-      Object {
-        "amount": 395,
-        "createdAt": 0,
-        "description": "Gum",
-        "id": "1",
-        "note": "now",
-      }
-    }
-    onSubmit={[Function]}
-  />
+<div>
   <div
-    className="edit-expense__remove"
+    className="page-header"
   >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit Expense
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <ExpenseForm
+      buttonLabel="Save Expense"
+      expense={
+        Object {
+          "amount": 395,
+          "createdAt": 0,
+          "description": "Gum",
+          "id": "1",
+          "note": "now",
+        }
+      }
+      onSubmit={[Function]}
+    />
     <button
-      className="edit-expense--button"
+      className="button button-secondary"
       onClick={[Function]}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
     >
       Remove
     </button>
