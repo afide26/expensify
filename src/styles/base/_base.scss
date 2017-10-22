@@ -7,70 +7,16 @@ html{
   box-sizing: border-box;
 }
 body{
+  background-color: #ffffff;
+  color: $dark-gray;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: $m-size;
-  background-color: #ffffff;
-  max-width: 968px;
+  line-height: 1.6;
   margin:0 auto;
 }
 
-// My own styles
-
-// .container{
-//   padding:2em;
-// }
-// .error{
-//   padding: .8rem;
-//   text-align: center;
-//   font-style:italic;
-//   background: rgba(255,0,0,0.2);
-//   width: 99%;
-//   margin: 10px auto;
-// }
-// form{
-//   display:flex;
-//   justify-content: center;
-// }
-.header{
-  position:relative;
-  &__image{
-    position:absolute;
-    top:10;
-    left:0;
-    float:left;
-    width: 3rem;
-  }
-  &__title{
-    margin-left: 3rem;
-  }
-}
-
-button{
-  cursor: pointer;
-  outline: none;
-  border-radius: .5rem;
-  margin-left: .2rem;
-  &:disabled{
-    opacity: 0.5;
-    cursor: default;
-  }
-}
-
-// .edit-expense{
-//   &--button{
-//     margin: 20px auto;
-//   }
-// }
-// End of my own styles
 .is-active{
   color: #d42150;
   font-weight: 700;
 }
-a{
-  margin-right: 10px;
-  text-decoration: none;
-}
 
-ul{
-  list-style-type:none;
-}
